@@ -1,0 +1,10 @@
+<footer role="contentinfo">
+    <div class="hr"></div>
+    <div class="footer-link">
+        <a href="{{.Site.BaseURL}}">Blog Home</a> / <a href="mailto:{{.Site.Params.email}}" target="_blank">Email</a>
+        {{ if .Site.Params.site }}
+            / <a href="{{.Site.Params.site}}">Main Site</a>
+        {{end}}
+    </div>
+    <div class="copyright">{{.Site.Copyright}}</div>
+</footer>

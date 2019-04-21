@@ -1,16 +1,7 @@
 <!DOCTYPE html>
 <html lang="{{ with .Site.LanguageCode }}{{ . }}{{ else }}en-US{{ end }}">
-<head>
-<meta charset="utf-8">
-{{ .Hugo.Generator }}
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link href="//fonts.googleapis.com/css?family=Open+Sans:400,800" rel="stylesheet" type="text/css">
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/github.min.css">
-<link rel="stylesheet" href="/css/normalize.css">
-<link rel="stylesheet" href="/css/skeleton.css">
-<link rel="stylesheet" href="/css/custom.css">
-<title>{{ .Title }}</title>
-</head>
+{{ partial "header.html" . }}
+
 <body>
 
 <div class="container">
@@ -56,18 +47,7 @@
 </aside>
 </main>
 
-
-	<footer role="contentinfo">
-		<div class="hr"></div>
-		<div class="footer-link">
-			<a href="{{.Site.BaseURL}}">Blog Home</a> / <a href="mailto:{{.Site.Params.email}}" target="_blank">Email</a>
-			{{ if .Site.Params.site }}
-				/ <a href="{{.Site.Params.site}}">Main Site</a>
-			{{end}}
-		</div>
-		<div class="copyright">{{.Site.Copyright}}</div>
-	</footer>
-
+  {{ partial "footer.html" . }}
   </div>
 
 </body>
