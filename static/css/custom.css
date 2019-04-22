@@ -23,14 +23,11 @@ footer {
   text-align: center;
 }
 
-main {
-  margin: 5rem 0;
-}
-
 .container a:link, .container a:visited {
 	font-weight: bold;
 	text-decoration: none;
-	}
+  }
+  
 .container a:hover, .container a:active {
 	font-weight: bold;
 	text-decoration: none;
