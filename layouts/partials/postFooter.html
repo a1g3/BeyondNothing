@@ -1,0 +1,37 @@
+<div>
+    <div class="hr"></div>
+        {{ if .Params.categories }}
+            <div>
+                {{ with .Params.categories }}
+                    Categories: 
+                    {{ range . }}
+                        <a href="{{ "categories" | absURL}}/{{ . | urlize }}">{{ . }}</a>
+                    {{ end }}
+                {{ end }}
+            </div>
+        {{ end }}
+
+        {{ if .Params.tags }}
+        <div>
+            Tags: 
+            {{ with .Params.tags }}
+                {{ range . }}
+                    <a href="{{ "tags" | absURL }}/{{ . | urlize }}">{{ . }}</a>
+                {{ end }}
+            {{ end }}
+        </div>
+        {{ end }}
+
+    <div style="display: inline-block; width: 100%;padding-top:2rem;">
+        {{ with .PrevInSection }}
+            <span style="float: left">
+            <a class="previous" href="{{.Permalink}}">&#9664; {{.Title}}</a>
+            </span>
+        {{ end }}
+        {{ with .NextInSection }}
+            <span style="float: right">
+                <a class="next" href="{{.Permalink}}">{{.Title}} &#9658;</a>
+            </span>
+        {{ end }}
+    </div>
+</div>

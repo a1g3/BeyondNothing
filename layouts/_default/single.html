@@ -6,7 +6,14 @@
 
 <div class="container">
   <header role="banner">
-  <h1 id="title">{{ .Title }}</h1>
+  <h1 class="title">{{ .Title }}</h1>
+  <aside id="meta" style="text-align: center; font-style: italic;">
+      <div>
+      <section>
+        <span class="entry-meta"><time itemprop="datePublished" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 02, 2006" }}</time></span>
+      </section>
+      </div>
+  </aside>
   </header>
 
   <main role="main">
@@ -15,45 +22,12 @@
            {{ .Content }}
         </article>
   </div>
-  <div class="hr"></div>
-<aside id="meta">
-    <div>
-    <section>
-      <span class="entry-meta">Written on <time itemprop="datePublished" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 02, 2006" }}</time></span>
-    </section>
-    {{ with .Params.topics }}
-    <ul id="topics">
-      {{ range . }}
-        <li><a href="{{ "topics" | absURL}}/{{ . | urlize }}">{{ . }}</a> </li>
-      {{ end }}
-    </ul>
-    {{ end }}
-    {{ with .Params.tags }}
-    <ul id="tags">
-      {{ range . }}
-        <li> <a href="{{ "tags" | absURL }}/{{ . | urlize }}">{{ . }}</a> </li>
-      {{ end }}
-    </ul>
-    {{ end }}
-    </div>
-    <div style="display:flex; justify-content:space-between;">
-        {{ with .PrevInSection }}
-        <span>
-          <a class="previous" href="{{.Permalink}}">&#9664; {{.Title}}</a>
-        </span>
-        {{ end }}
-        {{ with .NextInSection }}
-        <span>
-          <a class="next" href="{{.Permalink}}">{{.Title}} &#9658;</a>
-          </span>
-        {{ end }}
-    </div>
 
-</aside>
-</main>
+  {{ partial "postFooter.html" . }}
+  </main>
 
   {{ partial "footer.html" . }}
-  </div>
+</div>
 
 </body>
 </html>

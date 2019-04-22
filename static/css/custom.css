@@ -17,10 +17,18 @@ img {
   border: 0;
 }
 
-header,
-footer {
-  margin: 4rem 0;
+header {
+  margin: 3rem 0 1.5rem 0;
   text-align: center;
+}
+
+footer {
+  margin-bottom: 4rem;
+  text-align: center;
+}
+
+footer div.hr {
+  margin: 0 0 2rem 0;
 }
 
 .container a:link, .container a:visited {
@@ -80,4 +88,7 @@ pre {
 
 code {
 	overflow-x: scroll;
+}
+.title {
+  margin-bottom: 0.25%;
 }
