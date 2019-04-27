@@ -10,7 +10,7 @@
 	<h1>{{.Site.Title}}</h1>
 	</header>
 	
-	<main role="main">
+	<main id="mainPage" role="main">
 {{ range (where .Data.Pages ".Params.hidefromhome" "!=" "true") }}
 
 			<h2 class="entry-title" itemprop="headline"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>

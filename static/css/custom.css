@@ -92,3 +92,6 @@ code {
 .title {
   margin-bottom: 0.25%;
 }
+#mainPage {
+  margin-bottom: 2.5rem !important;
+}
