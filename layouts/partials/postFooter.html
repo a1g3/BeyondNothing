@@ -22,14 +22,14 @@
         </div>
         {{ end }}
 
-    <div style="display: inline-block; width: 100%;padding-top:2rem;">
+    <div id="posts">
         {{ with .PrevInSection }}
-            <span style="float: left">
+            <span class="leftFloat">
             <a class="previous" href="{{.Permalink}}">&#9664; {{.Title}}</a>
             </span>
         {{ end }}
         {{ with .NextInSection }}
-            <span style="float: right">
+            <span class="rightFloat">
                 <a class="next" href="{{.Permalink}}">{{.Title}} &#9658;</a>
             </span>
         {{ end }}

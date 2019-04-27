@@ -77,6 +77,11 @@ h2 {
   margin-bottom: 50px;
 }
 
+#meta {
+  text-align: center; 
+  font-style: italic;
+}
+
 mark {
   background: lightsteelblue;
 }
@@ -94,4 +99,15 @@ code {
 }
 #mainPage {
   margin-bottom: 2.5rem !important;
+}
+.rightFloat {
+  float: right;
+}
+.leftFloat {
+  float: left;
+}
+#adjacentPosts {
+  display: inline-block;
+  width: 100%;
+  padding-top:2rem;
 }
